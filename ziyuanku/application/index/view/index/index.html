@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>新闻管理</title>
+<style>.a{
+text-align: center;
+margin-top: 200px;
+	}</style>
+</head>
+
+<body>
+<div class="a">
+	
+		{volist name="news" id="vo"}
+			<div>
+				<h3><a target="_blank" href="{:url('news/index',array('id'=>$vo['id']))}">{$vo.title}</a>【{$vo.time}】</h3>
+				 <img src="__IMG__{$vo.pic}" height="50">
+				 
+				</div>
+				
+		{/volist}		
+<video src="__IMG__{$vo.video}";  width="300" ; height="300"; controls="controls"; preload="auto">The video is not supported by this browser,please change another browser.</video>
+
+<a href="{:url('/index.php/admin/login/index')}">后台管理</a>
+
+</div>
+
+</body>
+</html>
