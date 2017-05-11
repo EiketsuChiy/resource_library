@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:93:"D:\ProgramFiles\UPUPW_NP7.0\htdocs\resource\public/../application/index\view\index\index.html";i:1493887487;}*/ ?>
 <!DOCTYPE html>
 <html class="bit-html js_active  vc_desktop  vc_transform  vc_transform  vc_transform  csstransforms csstransforms3d csstransitions iphorm-js js no-touch cssanimations csstransforms csstransforms3d csstransitions cssfilters mobile-false no-touch js_active  vc_desktop  vc_transform  vc_transform  vc_transform iphorm-js js no-touch cssanimations csstransforms csstransforms3d csstransitions cssfilters mobile-false no-touch js_active  vc_desktop  vc_transform  vc_transform  vc_transform iphorm-js js no-touch cssanimations csstransforms csstransforms3d csstransitions cssfilters mobile-false no-touch" dir="ltr" style="" lang="zh-CN">
 <!--<![endif]-->
@@ -102,8 +103,8 @@
         <nav style="vertical-align: bottom;" id="navigation" class="wf-td" bitdataaction="site_menu_container" bitdatalocation="primary">
           <ul id="main-nav" data-st="0" data-sp="0" data-fh="" data-mw="" data-lh="" class="mainmenu fancy-rollovers wf-mobile-hidden bit-menu-default menu-frame-on" data-bit-menu="menu-frame-on" data-bit-float-menu="underline-hover">
             <li class=" menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2160 current_page_item bit-menu-post-id-2160 menu-item-8077 act first"><a href=""><span>首页</span></a></li>
-            <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-6400 menu-item-6401"><a href="{:url('about/index')}"><span>关于我们</span></a></li>
-            <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-7106 menu-item-7107"><a href="{:url('us/index')}"><span>联系我们</span></a></li>
+            <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-6400 menu-item-6401"><a href="<?php echo url('about/index'); ?>"><span>关于我们</span></a></li>
+            <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-7106 menu-item-7107"><a href="<?php echo url('us/index'); ?>"><span>联系我们</span></a></li>
             <li class=" menu-item menu-item-type-post_type menu-item-object-page bit-menu-post-id-7106 menu-item-7107"><a href=""><span> </span></a></li>
           </ul>
         </nav>
@@ -444,7 +445,7 @@
         </section>
         <section id="text-21" style="margin-top:0px;margin-bottom:0px;" class="widget widget_text site_tooler">
           <div class="textwidget ckeditorInLine bitWidgetFrame" bitrlt="text" bitkey="text" wid="text-21">
-          	<div style="text-align: center;" class="cs"><span style="color:#333333;"><span style="font-size: 14px;"><span style="font-size:12px;"> </span></span></span><span style="color:#FFFFFF;"><span style="font-size: 14px;"><span style="font-size: 12px;">技术支持：信软科技工作室<br>Copyright ©2017 All Rights Reserved</span></span><span style="font-size: 12px;"></span><span style="font-size: 12px;"><br>地址：河北省秦皇岛市北戴河区联峰北路90号 四号楼<a href="{:url('admin/login/index')}">405</a>室</span></span></div>
+          	<div style="text-align: center;" class="cs"><span style="color:#333333;"><span style="font-size: 14px;"><span style="font-size:12px;"> </span></span></span><span style="color:#FFFFFF;"><span style="font-size: 14px;"><span style="font-size: 12px;">技术支持：信软科技工作室<br>Copyright ©2017 All Rights Reserved</span></span><span style="font-size: 12px;"></span><span style="font-size: 12px;"><br>地址：河北省秦皇岛市北戴河区联峰北路90号 四号楼<a href="<?php echo url('admin/login/index'); ?>">405</a>室</span></span></div>
           </div>
         </section>
       </div>

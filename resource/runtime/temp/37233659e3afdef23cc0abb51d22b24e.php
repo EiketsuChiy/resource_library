@@ -1,0 +1,236 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:100:"D:\ProgramFiles\UPUPW_NP7.0\htdocs\resource\public/../application/admin\view\computerapp\detail.html";i:1494480319;s:92:"D:\ProgramFiles\UPUPW_NP7.0\htdocs\resource\public/../application/admin\view\common\top.html";i:1493170150;s:93:"D:\ProgramFiles\UPUPW_NP7.0\htdocs\resource\public/../application/admin\view\common\left.html";i:1494202963;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>后台管理</title>
+<meta name="description" content="Dashboard">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--Basic Styles-->
+<link href="/resource/public/static/admin/style/bootstrap.css" rel="stylesheet">
+<link href="/resource/public/static/admin/style/font-awesome.css" rel="stylesheet">
+<link href="/resource/public/static/admin/style/weather-icons.css" rel="stylesheet">
+
+<!--Beyond styles-->
+<link id="beyond-link" href="/resource/public/static/admin/style/beyond.css" rel="stylesheet" type="text/css">
+<link href="/resource/public/static/admin/style/demo.css" rel="stylesheet">
+<link href="/resource/public/static/admin/style/typicons.css" rel="stylesheet">
+<link href="/resource/public/static/admin/style/animate.css" rel="stylesheet">
+<script type="text/javascript" src="/resource/public/static/admin/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="/resource/public/static/admin/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" src="/resource/public/static/admin/ueditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+<!-- 头部 --> 
+<div class="navbar">
+
+    <div class="navbar-inner">
+        <div class="navbar-container">
+            <!-- Navbar Barnd -->
+            <div class="navbar-header pull-left">
+                <a href="#" class="navbar-brand">
+                    
+                <h4>秦职院资源库后台管理</h4>
+                        
+                </a>
+
+            </div>
+
+
+            <!-- /Navbar Barnd -->
+            <!-- Sidebar Collapse -->
+            <div class="sidebar-collapse" id="sidebar-collapse">
+                <i class="collapse-icon fa fa-bars"></i>
+            </div>
+            <!-- /Sidebar Collapse -->
+            <!-- Account Area and Settings -->
+
+            <div class="navbar-header pull-right">
+
+                <div class="navbar-account">
+                    <ul class="account-area">
+                        <li>
+                            <a class="login-area dropdown-toggle" data-toggle="dropdown">
+                                
+                                <section>
+                                    <h2><span class="profile"><span>欢迎您：<?php echo \think\Request::instance()->session('username'); ?></span></span></h2>
+                                </section>
+                            </a>
+                            <!--Login Area Dropdown-->
+                            <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+                                <li class="username"><a>David Stevenson</a></li>
+                                <li class="dropdown-footer">
+                                    <a href="<?php echo url('admin/logout'); ?>">
+                                   退出登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </a>
+                                </li>
+                                <li class="dropdown-footer">
+                                    <a href="<?php echo url('admin/edit',array('id'=>\think\Request::instance()->session('uid'))); ?>">
+                                            修改密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        </a>
+                                </li>
+                            </ul>
+                            <!--/Login Area Dropdown-->
+                        </li>
+                        <!-- /Account Area -->
+                        <!--Note: notice that setting div must start right after account area list.
+                            no space must be between these elements-->
+                        <!-- Settings -->
+                    </ul>
+                </div>
+            </div>
+            <!-- /Account Area and Settings -->
+        </div>
+    </div>
+</div> 
+
+<!-- /头部 -->
+
+
+<div class="main-container container-fluid">
+  <div class="page-container"> 
+    <!-- Page Sidebar --> 
+    <div class="page-sidebar" id="sidebar">
+  <ul class="nav sidebar-menu">
+    <!--Dashboard-->
+    
+    <li><span class="menu-text">&nbsp;<br>
+      &nbsp;</span></li>
+    <li> <a href="#" class="menu-dropdown"> <i class="menu-icon fa fa-user"></i> <span class="menu-text">管理员 </span> <i class="menu-expand"></i> </a>
+      <ul class="submenu">
+        <li> <a href="<?php echo url('admin/index'); ?>"> <span class="menu-text"> 管理列表 </span> <i class="menu-expand"></i> </a> </li>
+      </ul>
+    </li>
+    <li> <a href="#" class="menu-dropdown"> <i class="menu-icon fa fa-list"></i> <span class="menu-text">计算机应用技术</span> <i class="menu-expand"></i> </a>
+      <ul class="submenu">
+        <li> <a href="<?php echo url('computerapp/index'); ?>"> <span class="menu-text"> 资源列表 </span> <i class="menu-expand"></i> </a> </li>
+      </ul>
+    </li>
+    <li> <a href="#" class="menu-dropdown"> <i class="menu-icon fa fa-list"></i> <span class="menu-text">计算机网络技术</span> <i class="menu-expand"></i> </a>
+      <ul class="submenu">
+        <li> <a href="<?php echo url('net/index'); ?>"> <span class="menu-text"> 资源列表 </span> <i class="menu-expand"></i> </a> </li>
+      </ul>
+    </li>
+    <li> <a href="#" class="menu-dropdown"> <i class="menu-icon fa fa-list"></i> <span class="menu-text">艺术设计</span> <i class="menu-expand"></i> </a>
+      <ul class="submenu">
+        <li> <a href="<?php echo url('art/index'); ?>"> <span class="menu-text"> 资源列表 </span> <i class="menu-expand"></i> </a> </li>
+      </ul>
+    </li>
+    <li> <a href="#" class="menu-dropdown"> <i class="menu-icon fa fa-list"></i> <span class="menu-text">环境艺术设计</span> <i class="menu-expand"></i> </a>
+      <ul class="submenu">
+        <li> <a href="<?php echo url('env/index'); ?>"> <span class="menu-text"> 资源列表 </span> <i class="menu-expand"></i> </a> </li>
+      </ul>
+    </li>
+    <li> <a href="#" class="menu-dropdown"> <i class="menu-icon fa fa-list"></i> <span class="menu-text">数字媒体应用</span> <i class="menu-expand"></i> </a>
+      <ul class="submenu">
+        <li> <a href="<?php echo url('media/index'); ?>"> <span class="menu-text"> 资源列表 </span> <i class="menu-expand"></i> </a> </li>
+      </ul>
+    </li>
+    <li> <a href="#" class="menu-dropdown"> <i class="menu-icon fa fa-list"></i> <span class="menu-text">物联网应用技术</span> <i class="menu-expand"></i> </a>
+      <ul class="submenu">
+        <li> <a href="<?php echo url('iot/index'); ?>"> <span class="menu-text"> 资源列表 </span> <i class="menu-expand"></i> </a> </li>
+      </ul>
+    </li>
+    <li> <a href="#" class="menu-dropdown"> <i class="menu-icon fa fa-list"></i> <span class="menu-text">数字展示技术</span> <i class="menu-expand"></i> </a>
+      <ul class="submenu">
+        <li> <a href="<?php echo url('display/index'); ?>"> <span class="menu-text"> 资源列表 </span> <i class="menu-expand"></i> </a> </li>
+      </ul>
+    </li>
+    <li> <a href="#" class="menu-dropdown"> <i class="menu-icon fa fa-list"></i> <span class="menu-text">移动应用开发</span> <i class="menu-expand"></i> </a>
+      <ul class="submenu">
+        <li> <a href="<?php echo url('mobileapp/index'); ?>"> <span class="menu-text"> 资源列表 </span> <i class="menu-expand"></i> </a> </li>
+      </ul>
+    </li>
+    <li> <a href="#" class="menu-dropdown"> <i class="menu-icon fa fa-list"></i> <span class="menu-text">留言管理</span> <i class="menu-expand"></i> </a>
+      <ul class="submenu">
+        <li> <a href="#"> <span class="menu-text"> 留言列表 </span> <i class="menu-expand"></i> </a> </li>
+      </ul>
+    </li>
+    <li> <a href="#" class="menu-dropdown"> <i class="menu-icon fa fa-list"></i> <span class="menu-text">友情链接</span> <i class="menu-expand"></i> </a>
+      <ul class="submenu">
+        <li> <a href="#"> <span class="menu-text"> 友情链接列表 </span> <i class="menu-expand"></i> </a> </li>
+      </ul>
+    </li>
+  </ul>
+  <!-- /Sidebar Menu --> 
+</div>
+ 
+    <!-- /Page Sidebar --> 
+    <!-- Page Content -->
+    <div class="page-content"> 
+      <!-- Page Breadcrumb -->
+      <div class="page-breadcrumbs">
+        <ul class="breadcrumb">
+          <li> <a href="<?php echo url('index/index'); ?>">系统</a> </li>
+          <li> <a href="<?php echo url('computerapp/index'); ?>">计算机应用技术</a> </li>
+          <li class="active">资源详情</li>
+        </ul>
+        
+      </div>
+      <!-- /Page Breadcrumb --> 
+      
+      <!-- Page Body -->
+      <div style="float: right;margin-right: 20px;margin-top: 20px">
+        <input type="button" name="fh" id="fh" value=""  onclick="history.back();" style="cursor:pointer;background:url(/resource/public/static/admin/images/fanhui.png);width:32px;height:32px; border:none; " title="返回"/>
+      </div>
+      <div align="center" style="width:75%;margin-left: auto;margin-right: auto;">
+        <div class="alert alert-info" role="alert" style="margin-top: 20px">
+          <h4>标题</h4>
+        </div>
+ 
+        <div class="well well-sm" style="font-size: 16px">
+          <?php echo $Computerapps['title']; ?>
+        </div>
+        <div class="alert alert-info" role="alert" style="margin-top: 20px">
+          <h4>内容</h4>
+        </div>
+
+        <div class="well" style="font-size: 16px">
+          <?php echo $Computerapps['content']; ?>
+        </div>
+        <div class="alert alert-info" role="alert" style="margin-top: 20px">
+          <h4>文档</h4>
+        </div>
+
+        <div class="well well-sm">
+          <a href="/resource/public/static<?php echo $Computerapps['file']; ?>"><?php echo substr($Computerapps['file'],23,50); ?></a>
+        </div>
+      
+      <div style="width: 48%;float: left;">
+        <div class="alert alert-info" role="alert" style="margin-top: 20px">
+            <h4>图片</h4>
+        </div>
+
+        <div class="well" style="height: 400px;line-height: 350px" >
+            <img src="/resource/public/static<?php echo $Computerapps['pic']; ?>" onload='if (this.height>300) this.height=300;'>
+        </div>
+      </div> 
+      <div style="width: 48%;float: right;">
+        <div class="alert alert-info" role="alert" style="margin-top: 20px">
+            <h4>视频</h4>
+        </div>
+
+        <div class="well" style="height: 400px;line-height: 350px">
+            <video src="/resource/public/static<?php echo $Computerapps['video']; ?>" controls="controls" height="300px"></video>
+        </div>
+      </div> 
+      </div>
+<!--Basic Scripts--> 
+<script src="/resource/public/static/admin/style/jquery_002.js"></script> 
+<script src="/resource/public/static/admin/style/bootstrap.js"></script> 
+<script src="/resource/public/static/admin/style/jquery.js"></script> 
+<!--Beyond Scripts--> 
+<script src="/resource/public/static/admin/style/beyond.js"></script> 
+<script type="text/javascript">
+
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    UE.getEditor('content',{initialFrameWidth:1000,initialFrameHeight:400,});
+    
+
+
+</script>
+</body>
+</html>

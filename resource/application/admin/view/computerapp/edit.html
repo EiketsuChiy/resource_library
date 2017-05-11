@@ -77,12 +77,12 @@
                       <label for="group_id" class="col-sm-2 control-label no-padding-right">图片</label>
                       <div class="col-sm-6">
                         <input id="pic" placeholder="" name="pic" style="display:inline;" type="file">
-                        {if condition="$computerapp['pic'] neq ''"} <img src="/resource/public/static{$computerapp.pic}" height="50"> {else /} <span>暂无图片</span> {/if} </div>
+                        {if condition="$computerapp['pic'] neq ''"} 原文件<img src="/resource/public/static{$computerapp.pic}" height="50"> {else /} <span>暂无图片</span> {/if} </div>
                     </div><div class="form-group">
                       <label for="group_id" class="col-sm-2 control-label no-padding-right">视频</label>
                       <div class="col-sm-6">
                         <input id="video" placeholder="" name="video" style="display:inline;" type="file">
-                        {if condition="$computerapp['pic'] neq ''"} &nbsp;<br><center><video src="/resource/public/static{$computerapp.video}" controls="controls"> {else /} <span>暂无图片</span> {/if}</center> </div>
+                        {if condition="$computerapp['pic'] neq ''"} 原文件<br><center><video src="/resource/public/static{$computerapp.video}" controls="controls"> {else /} <span>暂无图片</span> {/if}</center> </div>
                     </div>
                     <div class="form-group">
                       <div class="col-sm-offset-2 col-sm-10">

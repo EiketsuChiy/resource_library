@@ -42,46 +42,56 @@
           <li> <a href="{:url('computerapp/index')}">计算机应用技术</a> </li>
           <li class="active">资源详情</li>
         </ul>
+        
       </div>
       <!-- /Page Breadcrumb --> 
       
       <!-- Page Body -->
-      <center>
-         <div class="page-body">
-        <div class="row">
-          <div class="col-lg-12 col-sm-12 col-xs-12">
-            <div class="widget">
-              <div class="widget-header bordered-bottom bordered-blue"> <span class="widget-caption">资源详情</span><h2><input type="button" name="fh" id="fh" value=""  onclick="history.back();" style="cursor:pointer;background:url(/resource/public/static/admin/images/fanhui.png);width:32px;height:32px; border:none; " title="返回"/>&nbsp;&nbsp;&nbsp;</h2></div>
-              <div class="widget-body">
-                <div id="horizontal-form">
-                  <form class="form-horizontal" role="form" action="" enctype="multipart/form-data" method="post">
-                    <input type="hidden" name="id" value="{$Computerapps.id}">
-                    <div >
-                      <div><h3>标题:</h3>{$Computerapps.title} </div>
-                      <hr>
-                      <div><h3>内容:</h3>{$Computerapps.content}  </div>
-                      <hr>
-                      <div><h3>文档:</h3><a href="/resource/public/static{$Computerapps.file}">{:substr(strtolower($Computerapps.file),23)}</a>
-                      </div>
-                        <hr>
-                      <div><h3>图片:<br><br><img src="/resource/public/static{$Computerapps.pic}"</h3></div>
-                      <hr>
-                      <div><h3>视频:</h3><video src="/resource/public/static{$Computerapps.video}" controls="controls"></video></div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div style="float: right;margin-right: 20px;margin-top: 20px">
+        <input type="button" name="fh" id="fh" value=""  onclick="history.back();" style="cursor:pointer;background:url(/resource/public/static/admin/images/fanhui.png);width:32px;height:32px; border:none; " title="返回"/>
       </div>
-      <!-- /Page Body --> 
-    </div>
-    <!-- /Page Content --> 
-  </div>
-</div>
-</center>
+      <div align="center" style="width:75%;margin-left: auto;margin-right: auto;">
+        <div class="alert alert-info" role="alert" style="margin-top: 20px">
+          <h4>标题</h4>
+        </div>
+ 
+        <div class="well well-sm" style="font-size: 16px">
+          {$Computerapps.title}
+        </div>
+        <div class="alert alert-info" role="alert" style="margin-top: 20px">
+          <h4>内容</h4>
+        </div>
+
+        <div class="well" style="font-size: 16px">
+          {$Computerapps.content}
+        </div>
+        <div class="alert alert-info" role="alert" style="margin-top: 20px">
+          <h4>文档</h4>
+        </div>
+
+        <div class="well well-sm">
+          <a href="/resource/public/static{$Computerapps.file}">{$Computerapps.file|substr=23,50}</a>
+        </div>
+      
+      <div style="width: 48%;float: left;">
+        <div class="alert alert-info" role="alert" style="margin-top: 20px">
+            <h4>图片</h4>
+        </div>
+
+        <div class="well" style="height: 400px;line-height: 350px" >
+            <img src="/resource/public/static{$Computerapps.pic}" onload='if (this.height>300) this.height=300;'>
+        </div>
+      </div> 
+      <div style="width: 48%;float: right;">
+        <div class="alert alert-info" role="alert" style="margin-top: 20px">
+            <h4>视频</h4>
+        </div>
+
+        <div class="well" style="height: 400px;line-height: 350px">
+            <video src="/resource/public/static{$Computerapps.video}" controls="controls" height="300px"></video>
+        </div>
+      </div> 
+      </div>
 <!--Basic Scripts--> 
 <script src="/resource/public/static/admin/style/jquery_002.js"></script> 
 <script src="/resource/public/static/admin/style/bootstrap.js"></script> 
