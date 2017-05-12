@@ -25,6 +25,7 @@ class Computerapp extends Base
             $data=[
                 'title'=>input('title'),
                 'content'=>input('content'),
+                'datetime'=>input('datetime'),
                 ];
             if($_FILES['file']['tmp_name']){
                 $file = request()->file('file');
@@ -45,6 +46,7 @@ class Computerapp extends Base
             if(!$validate->scene('add')->check($data)){
                $this->error($validate->getError()); die;
             }
+
             if(db('Computerapp')->insert($data)){
                 return $this->success('添加成功！','index');
             }else{
@@ -67,6 +69,7 @@ class Computerapp extends Base
                 'id'=>input('id'),
                 'title'=>input('title'),
                'content'=>input('content'),
+               'datetime'=>input('datetime'),
                
             ];
             if($_FILES['file']['tmp_name']){
@@ -113,17 +116,70 @@ class Computerapp extends Base
         $delfile=Db('Computerapp')->where('id',$id)->value('file');
         $delpic=Db('Computerapp')->where('id',$id)->value('pic');
         $delvideo=Db('Computerapp')->where('id',$id)->value('video');
-        if((unlink(ROOT_PATH.'public'.DS.'static'.$delfile))&&(unlink(ROOT_PATH.'public'.DS.'static'.$delpic))&&(unlink(ROOT_PATH.'public'.DS.'static'.$delvideo)))
-        {
-            db('Computerapp')->delete(input('id'));
-            $this->success('删除成功！','index');
+        for ($i=0; $i <4 ; $i++) { 
+            switch ($i) {
+                case 0:
+                    if($delfile)
+                    {
+                       if(unlink(ROOT_PATH.'public'.DS.'static'.$delfile))
+                       {
+                            break;
+                       }
+                       else
+                       {
+                            $this->error('删除失败！');
+                       }
+                       break;
+                    }
+                    else
+                    {
+                       break;
+                    }
+                case 1:
+                   if($delpic)
+                    {
+                       if(unlink(ROOT_PATH.'public'.DS.'static'.$delpic))
+                       {
+                            break;
+                       }
+                       else
+                       {
+                            $this->error('删除失败！');
+                       }
+                       break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                case 2:
+                    if($delvideo)
+                    {
+                       if(unlink(ROOT_PATH.'public'.DS.'static'.$delvideo))
+                       {
+                            break;
+                       }
+                       else
+                       {
+                            $this->error('删除失败！');
+                       }
+                       break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                case 3:
+                    db('Computerapp')->delete(input('id'));
+                    $this->success('删除成功！','index');
+                    break;
+            }
         }
-        else
-        {
-            $this->error('删除失败！');
-        }
+
     }
-
-
-
 }
+
+
+
+
+

@@ -49,6 +49,7 @@
                     <thead class="">
                       <tr>
                         <th class="text-center" width="5%">ID</th>
+                        <th class="text-center" >时间</th>
                         <th class="text-center" >标题</th>
                         <th class="text-center" >文档</th>
                         <th class="text-center" >图片</th>
@@ -60,15 +61,15 @@
                     {volist name="list" id="vo"}
                     <tr>
                       <td align="center">{$vo.id}</td>
+                      <td align="center">{$vo.datetime}</td>
                       <td align="center">{$vo.title}</td>
-                      
-                      <td align="center"> {if condition="$vo['file'] neq '' "}<a href="/resource/public/static{$vo.file}">{$vo.file|substr=14,50}</a>{else /}
+                      <td align="center"> {if condition="$vo['file'] neq '' "}<a href="/resource/public/static{$vo.file}">{$vo.file|substr=23,50}</a>{else /}
                         暂无文档
                         {/if} </td>
                       <td align="center"> {if condition="$vo['pic'] neq '' "} <img src="/resource/public/static{$vo.pic}" height="50"> {else /}
                         暂无图片
                         {/if} </td>
-                        <td align="center"> {if condition="$vo['video'] neq '' "} <a href="/resource/public/static{$vo.video}">{$vo.video|substr=15,50}</a>{else /}
+                        <td align="center"> {if condition="$vo['video'] neq '' "} <a href="/resource/public/static{$vo.video}">{$vo.video|substr=24,50}</a>{else /}
                         暂无视频
                         {/if} </td>
                       <td align="center">

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-05-11 08:51:22
+-- Generation Time: 2017-05-12 09:35:24
 -- 服务器版本： 10.1.9-MariaDB
 -- PHP Version: 7.0.1
 
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `art` (
   `file` varchar(100) NOT NULL,
   `pic` varchar(100) NOT NULL,
   `video` varchar(100) NOT NULL,
-  `time` date NOT NULL
+  `datetime` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='艺术设计';
 
 -- --------------------------------------------------------
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `computerapp` (
   `file` varchar(100) NOT NULL,
   `pic` varchar(100) NOT NULL,
   `video` varchar(100) NOT NULL,
-  `time` date NOT NULL
+  `datetime` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='计算机应用技术';
 
 -- --------------------------------------------------------
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `display` (
   `file` varchar(100) NOT NULL,
   `pic` varchar(100) NOT NULL,
   `video` varchar(100) NOT NULL,
-  `time` date NOT NULL
+  `datetime` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='数字展示技术';
 
 -- --------------------------------------------------------
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `env` (
   `file` varchar(100) NOT NULL,
   `pic` varchar(100) NOT NULL,
   `video` varchar(100) NOT NULL,
-  `time` date NOT NULL
+  `datetime` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='环境艺术设计';
 
 -- --------------------------------------------------------
@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `iot` (
   `file` varchar(100) NOT NULL,
   `pic` varchar(100) NOT NULL,
   `video` varchar(100) NOT NULL,
-  `time` date NOT NULL
+  `datetime` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='物联网应用技术';
 
 -- --------------------------------------------------------
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `media` (
   `file` varchar(100) NOT NULL,
   `pic` varchar(100) NOT NULL,
   `video` varchar(100) NOT NULL,
-  `time` date NOT NULL
+  `datetime` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='数字媒体应用';
 
 -- --------------------------------------------------------
@@ -149,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `mobileapp` (
   `file` varchar(100) NOT NULL,
   `pic` varchar(100) NOT NULL,
   `video` varchar(100) NOT NULL,
-  `time` date NOT NULL
+  `datetime` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='移动应用开发';
 
 -- --------------------------------------------------------
@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `net` (
   `file` varchar(100) NOT NULL,
   `pic` varchar(100) NOT NULL,
   `video` varchar(100) NOT NULL,
-  `time` date NOT NULL
+  `datetime` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='计算机网络技术';
 
 --
